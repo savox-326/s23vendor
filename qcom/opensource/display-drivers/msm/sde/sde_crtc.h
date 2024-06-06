@@ -466,6 +466,9 @@ struct sde_crtc {
 enum sde_crtc_dirty_flags {
 	SDE_CRTC_DIRTY_DEST_SCALER,
 	SDE_CRTC_DIRTY_DIM_LAYERS,
+#ifdef CONFIG_HYBRID_DC_DIMMING
+	SDE_CRTC_DIRTY_DIM_LAYER_EXPO,
+#endif
 	SDE_CRTC_NOISE_LAYER,
 	SDE_CRTC_DIRTY_MAX,
 };
@@ -555,6 +558,9 @@ struct sde_crtc_state {
 	struct sde_hw_scaler3_lut_cfg scl3_lut_cfg;
 
 	struct sde_core_perf_params new_perf;
+#ifdef CONFIG_HYBRID_DC_DIMMING
+	struct sde_hw_dim_layer *exposure_dim_layer;
+#endif
 	bool noise_layer_en;
 	struct drm_msm_noise_layer_cfg layer_cfg;
 	uint32_t cp_prop_cnt;

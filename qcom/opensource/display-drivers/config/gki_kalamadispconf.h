@@ -22,6 +22,7 @@
 #define CONFIG_SECDP_DBG 1
 #endif
 #endif
+#define CONFIG_HYBRID_DC_DIMMING 1
 #define CONFIG_DSI_PARSER 1
 #define CONFIG_DRM_SDE_WB 1
 #define CONFIG_DRM_SDE_RSC 1

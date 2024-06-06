@@ -240,6 +240,8 @@ msm_drm-$(CONFIG_DRM_MSM_DSI) += dsi/dsi_phy.o \
 
 msm_drm-$(CONFIG_DSI_PARSER) += dsi/dsi_parser.o
 
+msm_drm-$(CONFIG_HYBRID_DC_DIMMING) += sde/sde_expo_dim_layer.o
+
 msm_drm-$(CONFIG_THERMAL_OF) += msm_cooling_device.o
 
 msm_drm-$(CONFIG_DRM_MSM) += msm_atomic.o \
